@@ -24,8 +24,53 @@ categoryDropdown.addEventListener('change', () => {
   console.log('Parsed category ID:', categoryId);
   if (!isNaN(categoryId) && categoryId !== 'select') {
     loadProductsByCategory(categoryId);
+    showCategoryIcon(categoryId);
+  } else {
+    hideCategoryIcon();
   }
 });
+
+// Function to show category icon based on category ID
+function showCategoryIcon(categoryId) {
+  const categoryIcon = document.getElementById('categoryIcon');
+  categoryIcon.className = 'category-icon';
+  categoryIcon.style.backgroundImage = `url('../images/${getCategoryImage(categoryId)}')`;
+  console.log('Category icon visibility:', categoryIcon.style.visibility);
+  console.log('Category icon background image URL:', categoryIcon.style.backgroundImage);
+}
+
+// Function to hide category icon
+function hideCategoryIcon() {
+  const categoryIcon = document.getElementById('categoryIcon');
+  categoryIcon.className = 'hidden';
+  console.log('Category icon visibility:', categoryIcon.style.visibility);
+  console.log('Category icon background image URL:', categoryIcon.style.backgroundImage);
+}
+
+
+// Function to get the category image based on category ID
+function getCategoryImage(categoryId) {
+  switch (categoryId) {
+    case 1:
+      return 'beverage.png';
+    case 2:
+      return 'condiments.png';
+    case 3:
+      return 'confection.png';
+    case 4:
+      return 'dairy.png';
+    case 5:
+      return 'grain.png';
+    case 6:
+      return 'meat.png';
+    case 7:
+      return 'produce.png';
+    case 8:
+      return 'seafood.png';
+  }
+}
+
+
 
 // Load all categories
 function loadCategories() {
@@ -136,7 +181,7 @@ function displayProducts(products) {
     var categoryCell = row.insertCell(4);
 
     productIdCell.innerHTML = products[i].productId;
-    productNameCell.innerHTML = products[i].productName;
+    productNameCell.innerHTML = `<a href="details.html?id=${products[i].productId}">${products[i].productName}</a>`;
     unitPriceCell.innerHTML = products[i].unitPrice;
     unitsInStockCell.innerHTML = products[i].unitsInStock;
     categoryCell.innerHTML = getCategoryName(products[i].categoryId);
