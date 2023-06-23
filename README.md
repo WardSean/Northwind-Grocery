@@ -2,11 +2,19 @@
 Product Description:
 The website being built is for "Northwind Grocery," a platform where users can search for food products sold by the grocery store. The website consists of two main pages: the home page and the product search page. The home page provides information about Northwind Grocery and includes a link to the product search page. On the product search page, users can search for products by category or view all products. The page displays a table of products with their ID, name, and price, and users can click on a product to view its details on the product details page.
 
+![image](https://github.com/WardSean/Northwind-Grocery/assets/130578074/471a3a40-d169-40a1-bf16-4d5c8a36fc4c)
+
 Home Page:
 The home page serves as an introduction to Northwind Grocery. It includes a navigation bar with a link to the home page itself (index.html) and a link to the product search page (products.html). The page can be customized with additional information about the grocery store, its values, or any other relevant content.
 
+![image](https://github.com/WardSean/Northwind-Grocery/assets/130578074/492bda38-2879-4b6d-84aa-444875e59e50)
+![image](https://github.com/WardSean/Northwind-Grocery/assets/130578074/53881e8d-f903-4f91-a5fa-826cc58e21ff)
+
+
 Product Search Page:
 The product search page allows users to search for food products available at Northwind Grocery. It features a dropdown menu at the top where users can select the search criteria: "Select one..." (default option), "Search by category," or "View All." If users choose "View All," all products are immediately displayed in a table with relevant fields such as product ID, name, and price. Each product entry includes a "See Details" hyperlink that directs users to the product details page. If users choose "Search by category," another dropdown list appears, allowing users to select a specific category to filter the products.
+
+![image](https://github.com/WardSean/Northwind-Grocery/assets/130578074/12551d70-d6ef-4634-af32-bc9352d442d2)
 
 Product Details Page:
 The product details page (details.html) presents detailed information about a specific product. This page is accessed by clicking on the "See Details" link of a product on the product search page. It provides a space to display the product's details, such as its name, ID, price, category, and additional information. The page can be further customized to include any other relevant details about the product.
